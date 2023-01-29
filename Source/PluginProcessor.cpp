@@ -218,14 +218,14 @@ std::map<juce::String, SynthParameter*> SlimPhattyControllerAudioProcessor::crea
     dict.insert(std::make_pair("LPF_ENV2_AMOUNT", new SynthParameter("LPF_ENV2_AMOUNT", 27)));
     dict.insert(std::make_pair("MOD_SOURCE", new SynthParameter("MOD_SOURCE", 68)));
     dict.insert(std::make_pair("MOD_RATE", new SynthParameter("MOD_RATE", 3)));
-    dict.insert(std::make_pair("ENV2_DECAY", new SynthParameter("ENV2_DECAY", 24)));
-    dict.insert(std::make_pair("ENV2_SUSTAIN", new SynthParameter("ENV2_SUSTAIN", 25)));
-    dict.insert(std::make_pair("ENV2_RELEASE", new SynthParameter("ENV2_RELEASE", 26)));
-    dict.insert(std::make_pair("ENV2_ATTACK", new SynthParameter("ENV2_ATTACK", 23)));
-    dict.insert(std::make_pair("ENV1_ATTACK", new SynthParameter("ENV1_ATTACK", 28)));
-    dict.insert(std::make_pair("ENV1_DECAY", new SynthParameter("ENV1_DECAY", 29)));
-    dict.insert(std::make_pair("ENV1_SUSTAIN", new SynthParameter("ENV1_SUSTAIN", 30)));
-    dict.insert(std::make_pair("ENV1_RELEASE", new SynthParameter("ENV1_RELEASE", 31)));
+    dict.insert(std::make_pair("FILTER_ENV_DECAY", new SynthParameter("FILTER_ENV_DECAY", 24)));
+    dict.insert(std::make_pair("FILTER_ENV_SUSTAIN", new SynthParameter("FILTER_ENV_SUSTAIN", 25)));
+    dict.insert(std::make_pair("FILTER_ENV_RELEASE", new SynthParameter("FILTER_ENV_RELEASE", 26)));
+    dict.insert(std::make_pair("FILTER_ENV_ATTACK", new SynthParameter("FILTER_ENV_ATTACK", 23)));
+    dict.insert(std::make_pair("AMP_ENV_ATTACK", new SynthParameter("AMP_ENV_ATTACK", 28)));
+    dict.insert(std::make_pair("AMP_ENV_DECAY", new SynthParameter("AMP_ENV_DECAY", 29)));
+    dict.insert(std::make_pair("AMP_ENV_SUSTAIN", new SynthParameter("AMP_ENV_SUSTAIN", 30)));
+    dict.insert(std::make_pair("AMP_ENV_RELEASE", new SynthParameter("AMP_ENV_RELEASE", 31)));
 
     return dict;
 }

@@ -19,6 +19,6 @@ public:
     juce::String id;
     int ccNumber;
     int minValue = 0;
-    int maxValue = 128;
+    int maxValue = 127;
     int defaultValue = 0;
 };
