@@ -201,7 +201,7 @@ std::map<juce::String, SynthParameter*> SlimPhattyControllerAudioProcessor::crea
     dict.insert(std::make_pair("OSC1_OCTAVE", new SynthParameter("OSC1_OCTAVE", 74)));
     dict.insert(std::make_pair("SYNC_ON_OFF", new SynthParameter("SYNC_ON_OFF", 77)));
     dict.insert(std::make_pair("OSC2_WAVE", new SynthParameter("OSC2_WAVE", 11)));
-    dict.insert(std::make_pair("OSC2_OCTAVE", new SynthParameter("OSC2_WAVE", 75)));
+    dict.insert(std::make_pair("OSC2_OCTAVE", new SynthParameter("OSC2_OCTAVE", 75)));
     dict.insert(std::make_pair("GLIDE_RATE", new SynthParameter("GLIDE_RATE", 5)));
     dict.insert(std::make_pair("OSC2_TUNE", new SynthParameter("OSC2_TUNE", 10)));
     dict.insert(std::make_pair("MOD_SOURCE5", new SynthParameter("MOD_SOURCE5", 104)));
