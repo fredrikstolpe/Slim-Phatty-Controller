@@ -32,6 +32,17 @@ SlimPhattyControllerAudioProcessor::SlimPhattyControllerAudioProcessor()
         treeState.createAndAddParameter(std::make_unique<juce::AudioParameterInt>(iterator->first, iterator->second->id, iterator->second->minValue, iterator->second->maxValue, iterator->second->defaultValue));
         treeState.addParameterListener(iterator->first, this);
     }
+
+    auto availableMidiOutDevices = juce::MidiOutput::getAvailableDevices();
+
+    int i = 0;
+    for (juce::MidiDeviceInfo& device : availableMidiOutDevices)
+    {
+        if (device.name == "Slim Phatty")
+        {
+            changeMidiDevice(device.identifier);
+        }
+    }
 }
 
 SlimPhattyControllerAudioProcessor::~SlimPhattyControllerAudioProcessor()
