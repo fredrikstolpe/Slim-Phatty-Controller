@@ -8,6 +8,8 @@
               pluginFormats="buildAU,buildVST3">
   <MAINGROUP id="jsodTE" name="Slim Phatty Controller">
     <GROUP id="{0F7FC159-FCD5-6440-1846-ACD4ECEC135E}" name="Source">
+      <FILE id="HNTMpZ" name="MidiParameterType.h" compile="0" resource="0"
+            file="Source/MidiParameterType.h"/>
       <FILE id="cw2ku7" name="SynthParameter.cpp" compile="1" resource="0"
             file="Source/SynthParameter.cpp"/>
       <FILE id="zkXHKt" name="SynthParameter.h" compile="0" resource="0"

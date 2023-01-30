@@ -10,8 +10,22 @@
 
 #include "SynthParameter.h"
 
-SynthParameter::SynthParameter(juce::String id, int ccNumber)
+SynthParameter::SynthParameter(juce::String id, int number)
 {
     this->id = id;
-    this->ccNumber = ccNumber;
+    this->number = number;
+    this->type = CC;
+    this->minValue = 0;
+    this->maxValue = 127;
+    this->defaultValue = 0;
+}
+
+SynthParameter::SynthParameter(juce::String id, int number, MidiParameterType type, int minValue, int maxValue, int defaultValue)
+{
+    this->id = id;
+    this->number = number;
+    this->type = type;
+    this->minValue = minValue;
+    this->maxValue = maxValue;
+    this->defaultValue = defaultValue;
 }

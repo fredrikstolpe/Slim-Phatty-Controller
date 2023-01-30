@@ -11,14 +11,17 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "MidiParameterType.h"
 
 class SynthParameter
 {
 public:
-    SynthParameter(juce::String id, int ccNumber);
+    SynthParameter(juce::String id, int number);
+    SynthParameter(juce::String id, int number, MidiParameterType type, int minValue, int maxValue, int defaultValue);
     juce::String id;
-    int ccNumber;
-    int minValue = 0;
+    int number;
+    MidiParameterType type;
+    int minValue;
     int maxValue = 127;
     int defaultValue = 0;
 };

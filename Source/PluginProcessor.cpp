@@ -181,11 +181,21 @@ void SlimPhattyControllerAudioProcessor::processBlock (juce::AudioBuffer<float>&
 
 void SlimPhattyControllerAudioProcessor::parameterChanged(const juce::String& parameterID, float newValue)
 {
-    int ccValue = static_cast<int>(newValue);
+    int value = static_cast<int>(newValue);
+    juce::MidiMessage midiMessage;
+
+    if (parameters[parameterID]->type == PROGRAM_CHANGE)
+    {
+        midiMessage = juce::MidiMessage::programChange(1, value);
+    }
+    else
+    {
+        midiMessage = juce::MidiMessage::controllerEvent(1, parameters[parameterID]->number, value);
+    }
 
     if (midiOutput)
     {
-        midiOutput->sendMessageNow(juce::MidiMessage::controllerEvent(1, parameters[parameterID]->ccNumber, ccValue));
+        midiOutput->sendMessageNow(midiMessage);
     }
 }
 
@@ -226,6 +236,7 @@ std::map<juce::String, SynthParameter*> SlimPhattyControllerAudioProcessor::crea
     dict.insert(std::make_pair("AMP_ENV_DECAY", new SynthParameter("AMP_ENV_DECAY", 29)));
     dict.insert(std::make_pair("AMP_ENV_SUSTAIN", new SynthParameter("AMP_ENV_SUSTAIN", 30)));
     dict.insert(std::make_pair("AMP_ENV_RELEASE", new SynthParameter("AMP_ENV_RELEASE", 31)));
+    dict.insert(std::make_pair("PROGRAM_CHANGE", new SynthParameter("PROGRAM_CHANGE", 31, PROGRAM_CHANGE, 0, 99, 0)));
 
     return dict;
 }
