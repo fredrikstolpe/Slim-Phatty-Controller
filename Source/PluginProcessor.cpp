@@ -214,7 +214,7 @@ std::map<juce::String, SynthParameter*> SlimPhattyControllerAudioProcessor::crea
     dict.insert(std::make_pair("OSC2_OCTAVE", new SynthParameter("OSC2_OCTAVE", 75)));
     dict.insert(std::make_pair("GLIDE_RATE", new SynthParameter("GLIDE_RATE", 5)));
     dict.insert(std::make_pair("OSC2_TUNE", new SynthParameter("OSC2_TUNE", 10)));
-    dict.insert(std::make_pair("MOD_SOURCE5", new SynthParameter("MOD_SOURCE5", 104)));
+    dict.insert(std::make_pair("MOD_SOURCE6", new SynthParameter("MOD_SOURCE6", 105)));
     dict.insert(std::make_pair("MOD_DEST2", new SynthParameter("MOD_DEST2", 106)));
     dict.insert(std::make_pair("OSC1_LEVEL", new SynthParameter("OSC1_LEVEL", 15)));
     dict.insert(std::make_pair("OSC2_LEVEL", new SynthParameter("OSC2_LEVEL", 16)));
@@ -236,6 +236,7 @@ std::map<juce::String, SynthParameter*> SlimPhattyControllerAudioProcessor::crea
     dict.insert(std::make_pair("AMP_ENV_DECAY", new SynthParameter("AMP_ENV_DECAY", 29)));
     dict.insert(std::make_pair("AMP_ENV_SUSTAIN", new SynthParameter("AMP_ENV_SUSTAIN", 30)));
     dict.insert(std::make_pair("AMP_ENV_RELEASE", new SynthParameter("AMP_ENV_RELEASE", 31)));
+    dict.insert(std::make_pair("MOD_SOURCE5", new SynthParameter("MOD_SOURCE5", 104)));
     dict.insert(std::make_pair("PROGRAM_CHANGE", new SynthParameter("PROGRAM_CHANGE", 31, PROGRAM_CHANGE, 0, 99, 0)));
 
     return dict;
